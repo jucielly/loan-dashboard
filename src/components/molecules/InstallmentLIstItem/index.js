@@ -24,18 +24,18 @@ const StyledValueCard = styled.div`
   }
 `;
 
-const InstallmentListItem = ({ value, date }) => {
+const InstallmentListItem = ({ installment }) => {
+  const { formatedValue, dueDate } = installment;
   return (
     <StyledValueCard>
-      <span className="value">{value}</span>
-      <span className="date">{date}</span>
+      <span className="value">{formatedValue}</span>
+      <span className="date">{dueDate}</span>
     </StyledValueCard>
   );
 };
 
 InstallmentListItem.propTypes = {
-  value: PropTypes.number.isRequired,
-  date: PropTypes.string.isRequired,
+  installment: PropTypes.object.isRequired,
 };
 
 export default InstallmentListItem;
