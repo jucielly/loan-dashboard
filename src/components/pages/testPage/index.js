@@ -1,8 +1,8 @@
 import React from 'react';
-import InstallmentList from '../../organisms/InstallmentList';
+import InstallmentsCard from '../../organisms/installmentsCard';
 
 const Test = () => {
-  return <InstallmentList />;
+  return <InstallmentsCard />;
 };
 
 export default Test;
