@@ -1,5 +1,5 @@
 import React from 'react';
-import InstallmentList from '../../organisms/InstallmentList';
+import InstallmentList from '../InstallmentList';
 import SimpleCard from '../../atoms/SimpleCard';
 import styled from 'styled-components';
 

@@ -11,6 +11,7 @@ const Container = styled.div`
   padding: 20px;
   color: ${(props) => props.theme.colors.defaultWhite};
   background-color: ${(props) => props.theme.colors.secondary};
+  margin-bottom: 60px;
 
   h1 {
     flex-grow: 1;
