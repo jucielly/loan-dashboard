@@ -7,7 +7,6 @@ const SimpleCard = styled.div`
   border-radius: 20px;
   background-color: ${(props) => props.theme.colors.defaultWhite};
   box-shadow: rgba(0, 0, 0, 0.12) 0px 4px 20px;
-  margin: 50px;
 `;
 
 export default SimpleCard;

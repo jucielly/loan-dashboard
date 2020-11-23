@@ -7,10 +7,11 @@ const StyledValueCard = styled(SimpleCard)`
   padding: 30px;
   display: flex;
   color: ${(props) => props.theme.colors.fontColor};
-  height: 200px;
+  height: 150px;
   width: 400px;
   justify-content: space-between;
   align-items: center;
+  margin: 20px;
 
   .container {
     height: 100%;
@@ -25,6 +26,9 @@ const StyledValueCard = styled(SimpleCard)`
   }
 
   .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: ${(props) => props.theme.colors.helper};
     font-size: 80px;
   }
@@ -45,7 +49,7 @@ const ValueCard = ({ title, icon, value }) => {
 ValueCard.propTypes = {
   title: PropTypes.string.isRequired,
   icon: PropTypes.element,
-  value: PropTypes.number.isRequired,
+  value: PropTypes?.number.isRequired,
 };
 
 export default ValueCard;
