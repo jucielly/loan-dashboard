@@ -1,8 +1,8 @@
 import React from 'react';
-import Header from '../../organisms/Header';
+import LoanSimulatorCard from '../../organisms/LoanSimulatorCard';
 
 const Test = () => {
-  return <Header />;
+  return <LoanSimulatorCard />;
 };
 
 export default Test;

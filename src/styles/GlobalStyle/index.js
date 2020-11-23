@@ -15,5 +15,9 @@ button {
 }
 input:focus {
     outline: none;
-};
+}
+
+fieldset{
+    border: none;
+}
 `;

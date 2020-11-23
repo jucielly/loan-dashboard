@@ -1,21 +1,21 @@
 import React from 'react';
-import Input from '../../atoms/input';
 import Button from '../../atoms/Button';
 import styled from 'styled-components';
+import TextField from '../../molecules/TextField';
 
 const StyledForm = styled.form`
-  margin-top: 40px;
   align-items: center;
   display: flex;
   flex-direction: column;
+  margin-top: 50px;
 `;
 
 const LoanSimulatorForm = () => {
   return (
     <StyledForm>
-      <Input placeholder="Valor a ser emprestado" />
-      <Input placeholder="taxa de juros" />
-      <Input placeholder="total de parcelas" />
+      <TextField label="Valor do emprestimo" name="loan" />
+      <TextField label="Taxa de Juros" name="taxes" />
+      <TextField label="Total de Parcelas" name="installments" />
       <Button>Simular</Button>
     </StyledForm>
   );
