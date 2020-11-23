@@ -3,15 +3,12 @@ import styled from 'styled-components';
 const Input = styled.input`
   color: ${(props) => props.theme.colors.fontColor};
   text-align: center;
-  width: 70%;
-  height: 30px;
+  width: 300px;
+  height: 40px;
   border-radius: 20px;
   border: 1px solid ${(props) => props.theme.colors.secondary};
   transition: 0.3s;
-
-  & + input {
-    margin: 20px;
-  }
+  margin-bottom: 15px;
 
   &:focus {
     border: 1px solid ${(props) => props.theme.colors.terciary};

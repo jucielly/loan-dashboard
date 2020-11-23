@@ -7,6 +7,7 @@ import Avatar from '../../atoms/Avatar';
 import ValueCard from '../../molecules/ValueCard';
 import { GiReceiveMoney } from 'react-icons/gi';
 import InstallmentListItem from '../../molecules/InstallmentLIstItem';
+import LoanSimulatorForm from '../../molecules/LoanSimulatorForm';
 
 const Test = () => {
   return (
@@ -26,6 +27,7 @@ const Test = () => {
       <InstallmentListItem value={`R$ ${500}`} date="17/10/20" />
       <InstallmentListItem value={`R$ ${500}`} date="17/10/20" />
       <InstallmentListItem value={`R$ ${500}`} date="17/10/20" />
+      <LoanSimulatorForm />
     </>
   );
 };
