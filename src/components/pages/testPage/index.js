@@ -1,8 +1,8 @@
 import React from 'react';
-import LoanSimulatorCard from '../../organisms/LoanSimulatorCard';
+import InstallmentList from '../../organisms/InstallmentList';
 
 const Test = () => {
-  return <LoanSimulatorCard />;
+  return <InstallmentList />;
 };
 
 export default Test;
