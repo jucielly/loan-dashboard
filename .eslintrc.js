@@ -21,7 +21,7 @@ module.exports = {
   rules: {
     semi: [2, 'always'],
     'comma-dangle': [0, 'always'],
-    'prettier/prettier': 'error',
+    'prettier/prettier': 'warn',
     'react/jsx-filename-extension': ['warn', { extensions: ['.jsx', '.js'] }],
     'import/prefer-default-export': 'off',
     'no-param-reassign': 'off',
