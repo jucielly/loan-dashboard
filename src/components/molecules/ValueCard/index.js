@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import SimpleCard from '../../atoms/SimpleCard';
+import Skeleton from 'react-loading-skeleton';
 
 const StyledValueCard = styled(SimpleCard)`
   padding: 30px;
@@ -34,12 +35,12 @@ const StyledValueCard = styled(SimpleCard)`
   }
 `;
 
-const ValueCard = ({ title, icon, value }) => {
+const ValueCard = ({ title, icon, value, loading }) => {
   return (
     <StyledValueCard>
       <div className="container">
         <h1>{title}</h1>
-        <span>{value}</span>
+        <span>{loading ? <Skeleton height={25} /> : value}</span>
       </div>
       <div className="icon">{icon}</div>
     </StyledValueCard>
@@ -49,7 +50,8 @@ const ValueCard = ({ title, icon, value }) => {
 ValueCard.propTypes = {
   title: PropTypes.string.isRequired,
   icon: PropTypes.element,
-  value: PropTypes?.number.isRequired,
+  value: PropTypes.number.isRequired,
+  loading: PropTypes.bool,
 };
 
 export default ValueCard;

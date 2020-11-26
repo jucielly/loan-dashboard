@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { darken } from 'polished';
+import formatBRLMoney from '../../../utils/formatMoney';
 
 const StyledValueCard = styled.div`
   padding: 10px;
@@ -25,7 +26,8 @@ const StyledValueCard = styled.div`
 `;
 
 const InstallmentListItem = ({ installment }) => {
-  const { formatedValue, dueDate } = installment;
+  const { value, dueDate } = installment;
+  const formatedValue = formatBRLMoney(value);
   return (
     <StyledValueCard>
       <span className="value">{formatedValue}</span>
