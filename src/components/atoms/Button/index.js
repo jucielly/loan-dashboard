@@ -17,6 +17,11 @@ const Button = styled.button`
   &:hover {
     background: ${(props) => darken(0.2, props.theme.colors.primary)};
   }
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
 `;
 
 export default Button;

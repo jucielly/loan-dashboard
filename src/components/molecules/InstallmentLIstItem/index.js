@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { darken } from 'polished';
 import formatBRLMoney from '../../../utils/formatMoney';
+import Button from '../../atoms/Button';
 
 const StyledValueCard = styled.div`
   padding: 10px;
@@ -25,6 +26,17 @@ const StyledValueCard = styled.div`
   }
 `;
 
+const AnticipateButton = styled(Button)`
+  background-color: ${(props) => props.theme.colors.sucess};
+  &:hover {
+    background-color: ${(props) => darken(0.2, props.theme.colors.sucess)};
+  }
+  width: 30%;
+  height: 30px;
+
+  margin-bottom: 5px;
+`;
+
 const InstallmentListItem = ({ installment }) => {
   const { value, dueDate } = installment;
   const formatedValue = formatBRLMoney(value);
@@ -32,6 +44,7 @@ const InstallmentListItem = ({ installment }) => {
     <StyledValueCard>
       <span className="value">{formatedValue}</span>
       <span className="date">{dueDate}</span>
+      <AnticipateButton>Antecipar</AnticipateButton>
     </StyledValueCard>
   );
 };
