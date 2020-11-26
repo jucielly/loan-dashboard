@@ -1,13 +1,16 @@
 import React from 'react';
-import Test from './components/pages/testPage';
+import LoanDashboard from './components/pages/LoanDashboard';
 import Theme from './styles/theme';
 import GlobalStyle from './styles/GlobalStyle';
+import LoanProvider from './providers/LoanProvider';
 
 const App = () => {
   return (
     <Theme>
       <GlobalStyle />
-      <Test />
+      <LoanProvider>
+        <LoanDashboard />
+      </LoanProvider>
     </Theme>
   );
 };
