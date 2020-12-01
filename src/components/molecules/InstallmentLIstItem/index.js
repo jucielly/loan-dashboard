@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { darken } from 'polished';
 import formatBRLMoney from '../../../utils/formatMoney';
+import Button from '../../atoms/Button';
+import Label from '../../atoms/Label';
 
 const StyledValueCard = styled.div`
   padding: 10px;
@@ -25,19 +27,31 @@ const StyledValueCard = styled.div`
   }
 `;
 
-const InstallmentListItem = ({ installment }) => {
+const AnticipateButton = styled(Button)`
+  padding: 1px 10px;
+  margin-bottom: 5px;
+`;
+
+const InstallmentListItem = ({ installment, onAntecipate }) => {
   const { value, dueDate } = installment;
   const formatedValue = formatBRLMoney(value);
   return (
     <StyledValueCard>
       <span className="value">{formatedValue}</span>
       <span className="date">{dueDate}</span>
+      {!installment.payd && (
+        <AnticipateButton color="terciary" onClick={onAntecipate}>
+          Antecipar
+        </AnticipateButton>
+      )}
+      {installment.payd && <Label color="success">Parcela paga</Label>}
     </StyledValueCard>
   );
 };
 
 InstallmentListItem.propTypes = {
   installment: PropTypes.object.isRequired,
+  onAntecipate: PropTypes.func.isRequired,
 };
 
 export default InstallmentListItem;

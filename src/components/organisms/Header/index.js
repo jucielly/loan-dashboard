@@ -29,9 +29,8 @@ const CardContainer = styled.div`
 const Header = () => {
   const { overview, loading } = useLoan();
 
-  const { amountTaken, amountPayd } = overview;
+  const { amountTaken, amountPayd, toBePayd } = overview;
 
-  const toPayOff = amountTaken - amountPayd;
   return (
     <Container>
       <h1>Meus Emprestimos</h1>
@@ -51,7 +50,7 @@ const Header = () => {
         />
         <ValueCard
           title="A Pagar"
-          value={formatBRLMoney(toPayOff)}
+          value={formatBRLMoney(toBePayd)}
           icon={<GiMoneyStack />}
           loading={loading}
         />
