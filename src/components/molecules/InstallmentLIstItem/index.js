@@ -27,30 +27,27 @@ const StyledValueCard = styled.div`
 `;
 
 const AnticipateButton = styled(Button)`
-  background-color: ${(props) => props.theme.colors.sucess};
-  &:hover {
-    background-color: ${(props) => darken(0.2, props.theme.colors.sucess)};
-  }
-  width: 30%;
-  height: 30px;
-
+  padding: 1px 10px;
   margin-bottom: 5px;
 `;
 
-const InstallmentListItem = ({ installment }) => {
+const InstallmentListItem = ({ installment, onAntecipate }) => {
   const { value, dueDate } = installment;
   const formatedValue = formatBRLMoney(value);
   return (
     <StyledValueCard>
       <span className="value">{formatedValue}</span>
       <span className="date">{dueDate}</span>
-      <AnticipateButton>Antecipar</AnticipateButton>
+      <AnticipateButton color="terciary" onClick={onAntecipate}>
+        Antecipar
+      </AnticipateButton>
     </StyledValueCard>
   );
 };
 
 InstallmentListItem.propTypes = {
   installment: PropTypes.object.isRequired,
+  onAntecipate: PropTypes.func.isRequired,
 };
 
 export default InstallmentListItem;

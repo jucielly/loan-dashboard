@@ -10,13 +10,14 @@ const theme = {
     defaultWhite: '#ffff',
     fontColor: '#000B3C',
     helper: '#CDCDCD',
-    sucess: '#659B5E',
+    success: '#659B5E',
     danger: '#E33D2F',
   },
   fonts: {
     default: 'Catamaran, sans-serif',
     fontSizes: {
       small: '1em',
+      mediumSmall: '1.2em',
       medium: '2em',
       large: '3em',
     },
