@@ -15,7 +15,8 @@ const StyledForm = styled.form`
 const LoanSimulatorForm = () => {
   const [open, setOpen] = useState(false);
   const [simulation, setSimulation] = useState();
-  const { register, handleSubmit } = useForm();
+  const { register, errors, handleSubmit } = useForm();
+  console.log('oi', errors);
 
   const onSubmit = (formValues) => {
     const loanValue = +formValues.loanValue;
@@ -24,7 +25,6 @@ const LoanSimulatorForm = () => {
     const interest = loanValue * (monthlyInterest / 100);
     const total = loanValue + interest;
     const installmentValue = total / numberOfInstallments;
-    console.log('oi', total);
 
     setSimulation({
       loanValue,
@@ -49,17 +49,20 @@ const LoanSimulatorForm = () => {
         <TextField
           label="Valor do emprestimo"
           name="loanValue"
-          inputRef={register}
+          inputRef={register({ required: 'Insira o valor' })}
+          error={errors.loanValue?.message}
         />
         <TextField
           label="Taxa de Juros"
           name="monthlyInterest"
-          inputRef={register}
+          inputRef={register({ required: 'Insira o valor' })}
+          error={errors.monthlyInterest?.message}
         />
         <TextField
           label="Total de Parcelas"
           name="numberOfInstallments"
-          inputRef={register}
+          inputRef={register({ required: 'Insira o valor' })}
+          error={errors.numberOfInstallments?.message}
         />
         <Button type="submit">Simular</Button>
       </StyledForm>
