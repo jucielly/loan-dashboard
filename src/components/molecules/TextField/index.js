@@ -10,11 +10,11 @@ const Container = styled.fieldset`
   color: ${(props) => darken(0.4, props.theme.colors.helper)};
 `;
 
-const TextField = ({ label, name }) => {
+const TextField = ({ label, name, inputRef }) => {
   return (
     <Container>
       <label htmlFor={name}>{label}</label>
-      <Input />
+      <Input name={name} ref={inputRef} />
     </Container>
   );
 };
@@ -22,6 +22,7 @@ const TextField = ({ label, name }) => {
 TextField.propTypes = {
   label: PropTypes.string.isRequired,
   name: PropTypes.string,
+  inputRef: PropTypes.func.isRequired,
 };
 
 export default TextField;

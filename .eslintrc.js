@@ -26,5 +26,6 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'no-param-reassign': 'off',
     'no-console': ['warn', { allow: ['tron'] }],
+    'no-unused-vars': 'warn',
   },
 };
