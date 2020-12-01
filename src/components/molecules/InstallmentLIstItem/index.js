@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { darken } from 'polished';
 import formatBRLMoney from '../../../utils/formatMoney';
 import Button from '../../atoms/Button';
+import Label from '../../atoms/Label';
 
 const StyledValueCard = styled.div`
   padding: 10px;
@@ -43,7 +44,7 @@ const InstallmentListItem = ({ installment, onAntecipate }) => {
           Antecipar
         </AnticipateButton>
       )}
-      {installment.payd && <span color="success">pago</span>}
+      {installment.payd && <Label color="success">Parcela paga</Label>}
     </StyledValueCard>
   );
 };
