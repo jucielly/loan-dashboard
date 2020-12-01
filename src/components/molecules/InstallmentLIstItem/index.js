@@ -38,9 +38,12 @@ const InstallmentListItem = ({ installment, onAntecipate }) => {
     <StyledValueCard>
       <span className="value">{formatedValue}</span>
       <span className="date">{dueDate}</span>
-      <AnticipateButton color="terciary" onClick={onAntecipate}>
-        Antecipar
-      </AnticipateButton>
+      {!installment.payd && (
+        <AnticipateButton color="terciary" onClick={onAntecipate}>
+          Antecipar
+        </AnticipateButton>
+      )}
+      {installment.payd && <span color="success">pago</span>}
     </StyledValueCard>
   );
 };

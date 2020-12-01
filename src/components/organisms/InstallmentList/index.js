@@ -8,7 +8,7 @@ import LoadingSpinner from '../../atoms/LoadingSpinner';
 const InstallmentList = () => {
   const [open, setOpen] = useState(false);
   const [installment, setInstalment] = useState();
-  const { overview, loading } = useLoan();
+  const { overview, loading, payInstallment } = useLoan();
   const installments = overview.installments || [];
 
   const handleCloseModal = () => {
@@ -20,6 +20,11 @@ const InstallmentList = () => {
     setOpen(true);
   };
 
+  const handlePayInstallment = (installment) => () => {
+    payInstallment(installment);
+    handleCloseModal();
+  };
+
   if (loading) {
     return <LoadingSpinner />;
   } else {
@@ -29,6 +34,7 @@ const InstallmentList = () => {
           open={open}
           onClose={handleCloseModal}
           installment={installment}
+          payInstallment={handlePayInstallment(installment)}
         />
         <ul>
           {installments.map((installment, key) => {

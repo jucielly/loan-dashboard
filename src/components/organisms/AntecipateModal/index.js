@@ -10,7 +10,7 @@ const Container = styled.div`
   justify-content: space-between;
 `;
 
-const AntecipateModal = ({ open, onClose, installment }) => {
+const AntecipateModal = ({ open, onClose, installment, payInstallment }) => {
   return (
     <BaseModal
       title={`Gostaria de antecipar a parcela de ${installment?.dueDate} no valor de ${installment?.formatedValue}`}
@@ -18,7 +18,9 @@ const AntecipateModal = ({ open, onClose, installment }) => {
       onClose={onClose}
     >
       <Container>
-        <Button color="success">Sim</Button>
+        <Button color="success" onClick={payInstallment}>
+          Sim
+        </Button>
         <Button color="danger" onClick={onClose}>
           Não
         </Button>
@@ -31,6 +33,7 @@ AntecipateModal.propTypes = {
   open: PropTypes.bool.isRequired,
   onClose: PropTypes.func.isRequired,
   installment: PropTypes.object.isRequired,
+  payInstallment: PropTypes.func.isRequired,
 };
 
 export default AntecipateModal;
