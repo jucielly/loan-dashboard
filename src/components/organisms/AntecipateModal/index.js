@@ -8,6 +8,7 @@ const Container = styled.div`
   display: flex;
   width: 70%;
   justify-content: space-between;
+  margin-top: 40px;
 `;
 
 const AntecipateModal = ({ open, onClose, installment, payInstallment }) => {

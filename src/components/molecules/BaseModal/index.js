@@ -32,10 +32,10 @@ const Modal = styled(SimpleCard)`
   ${animateModal(1)}
 
   .container {
-    margin: 30px 0px 30px 0px;
+    margin: 10px 0px 10px 0px;
     display: flex;
     h1 {
-      font-size: ${(props) => props.theme.fonts.fontSizes.mediumSmall};
+      font-size: ${(props) => props.theme.fonts.fontSizes[props.titleSize]};
     }
 
     .closeBtn {
@@ -55,6 +55,9 @@ const Modal = styled(SimpleCard)`
     }
   }
 `;
+Modal.defaultProps = {
+  titleSize: 'mediumSmall',
+};
 
 const OverLay = styled.div`
   position: fixed;
@@ -67,11 +70,11 @@ const OverLay = styled.div`
   ${animateModal(0.7)}
 `;
 
-const BaseModal = ({ children, title, open, onClose }) => {
+const BaseModal = ({ children, title, open, onClose, titleSize }) => {
   return (
     <>
       <OverLay open={open} onClick={onClose} />
-      <Modal open={open}>
+      <Modal open={open} titleSize={titleSize}>
         <div className="container">
           <h1>{title}</h1>
           <button className="closeBtn" onClick={onClose}>
@@ -89,6 +92,7 @@ BaseModal.propTypes = {
   title: PropTypes.string.isRequired,
   open: PropTypes.bool.isRequired,
   onClose: PropTypes.func.isRequired,
+  titleSize: PropTypes.string,
 };
 
 export default BaseModal;
