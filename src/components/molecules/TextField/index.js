@@ -15,11 +15,11 @@ const Container = styled.fieldset`
   }
 `;
 
-const TextField = ({ label, name, inputRef, error }) => {
+const TextField = ({ label, name, inputRef, error, type }) => {
   return (
     <Container>
       <label htmlFor={name}>{label}</label>
-      <Input name={name} ref={inputRef} />
+      <Input name={name} ref={inputRef} type={type} />
       {error && <p>{error}</p>}
     </Container>
   );
@@ -30,6 +30,7 @@ TextField.propTypes = {
   name: PropTypes.string,
   inputRef: PropTypes.func.isRequired,
   error: PropTypes.string,
+  type: PropTypes.string,
 };
 
 export default TextField;
