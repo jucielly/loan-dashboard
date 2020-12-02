@@ -8,11 +8,15 @@ const Card = styled(SimpleCard)`
   margin: 40px;
   flex-direction: column;
   align-items: center;
-  height: 450px;
   width: 500px;
+  padding: 20px 20px 20px 20px;
 
   h1 {
     margin-top: 20px;
+  }
+
+  @media (max-width: 500px) {
+    width: 350px;
   }
 `;
 
