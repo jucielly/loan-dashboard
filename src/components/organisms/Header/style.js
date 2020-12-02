@@ -20,7 +20,7 @@ export const CardContainer = styled.div`
   justify-content: space-around;
   flex-direction: row;
 
-  @media (max-width: 425px) {
+  @media (max-width: 500px) {
     width: 100%;
     flex-direction: column;
     margin: 150px 0 20px 0;

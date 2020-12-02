@@ -48,12 +48,18 @@ export const StyledValueCard = styled(SimpleCard)`
     }
   }
 
-  @media (max-width: 425px) {
-    padding: 0px;
+  @media (max-width: 500px) {
+    padding: 10px;
     justify-content: center;
     width: 100%;
     margin: 5px;
-    flex-direction: row;
+
+    .container {
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
 
     span,
     h1 {
