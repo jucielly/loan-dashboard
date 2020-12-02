@@ -9,14 +9,13 @@ const StyledForm = styled.form`
   align-items: center;
   display: flex;
   flex-direction: column;
-  margin-top: 50px;
+  margin: 20px 0 10px 0;
 `;
 
 const LoanSimulatorForm = () => {
   const [open, setOpen] = useState(false);
   const [simulation, setSimulation] = useState();
   const { register, errors, handleSubmit } = useForm();
-  console.log('oi', errors);
 
   const onSubmit = (formValues) => {
     const loanValue = +formValues.loanValue;

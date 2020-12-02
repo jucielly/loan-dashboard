@@ -13,6 +13,12 @@ const Container = styled.div`
   p {
     font-size: ${(props) => props.theme.fonts.fontSizes.mediumSmall};
   }
+
+  @media (max-width: 500px) {
+    p {
+      text-align: center;
+    }
+  }
 `;
 
 const SimulationModal = ({ open, onClose, simulation = {} }) => {
