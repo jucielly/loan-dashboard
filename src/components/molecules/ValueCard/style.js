@@ -16,7 +16,7 @@ export const StyledValueCard = styled(SimpleCard)`
     flex-direction: column;
     justify-content: space-between;
 
-    span {
+    .value {
       color: ${(props) => props.theme.colors.primary};
       font-size: ${(props) => props.theme.fonts.fontSizes.medium};
     }
@@ -36,7 +36,7 @@ export const StyledValueCard = styled(SimpleCard)`
       font-size: 50px;
     }
 
-    span {
+    .value {
       font-size: 1.5em !important;
     }
   }
@@ -55,13 +55,13 @@ export const StyledValueCard = styled(SimpleCard)`
     margin: 5px;
 
     .container {
-      width: 100%;
+      width: 90%;
       flex-direction: row;
       justify-content: space-between;
       align-items: flex-end;
     }
 
-    span,
+    .value,
     h1 {
       font-size: 1.2em !important;
     }

@@ -14,6 +14,10 @@ const Card = styled(SimpleCard)`
   h1 {
     margin-top: 20px;
   }
+
+  @media (max-width: 500px) {
+    width: 350px;
+  }
 `;
 
 const LoanSimulatorCard = () => {

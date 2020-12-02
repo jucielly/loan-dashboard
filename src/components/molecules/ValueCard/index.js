@@ -8,7 +8,9 @@ const ValueCard = ({ title, icon, value, loading }) => {
     <StyledValueCard>
       <div className="container">
         <h1>{title}</h1>
-        <span>{loading ? <Skeleton height={25} /> : value}</span>
+        <span className="value">
+          {loading ? <Skeleton height={25} /> : value}
+        </span>
       </div>
       <div className="icon">{icon}</div>
     </StyledValueCard>

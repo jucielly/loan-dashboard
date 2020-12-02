@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  width: 100%;
   display: flex;
   justify-content: center;
   height: 200px;
@@ -21,7 +22,7 @@ export const CardContainer = styled.div`
   flex-direction: row;
 
   @media (max-width: 500px) {
-    width: 100%;
+    width: 90%;
     flex-direction: column;
     margin: 150px 0 20px 0;
   }
