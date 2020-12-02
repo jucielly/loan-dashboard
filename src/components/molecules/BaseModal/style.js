@@ -52,6 +52,15 @@ export const Modal = styled(SimpleCard)`
       }
     }
   }
+
+  @media (max-width: 500px) {
+    h1 {
+      text-align: center;
+    }
+    justify-content: center;
+    width: 350px;
+    height: 290px;
+  }
 `;
 Modal.defaultProps = {
   titleSize: 'mediumSmall',

@@ -18,7 +18,8 @@ const LoanProvider = ({ children }) => {
       }
     }, 0);
 
-    const toBePayd = overview.amountTaken - amountPayd;
+    const toBePayd =
+      overview.amountTaken + overview.totalAmountInTaxes - amountPayd;
     setOverview({
       ...overview,
       amountPayd,
