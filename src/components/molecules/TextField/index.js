@@ -1,19 +1,7 @@
 import React from 'react';
 import Input from '../../atoms/input';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import { darken } from 'polished';
-
-const Container = styled.fieldset`
-  display: flex;
-  flex-direction: column;
-  color: ${(props) => darken(0.4, props.theme.colors.helper)};
-  p {
-    color: ${(props) => props.theme.colors.danger};
-    margin: 0;
-    padding: 0;
-  }
-`;
+import { Container } from './style';
 
 const TextField = ({ label, name, inputRef, error, type }) => {
   return (

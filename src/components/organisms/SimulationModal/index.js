@@ -1,25 +1,8 @@
 import React from 'react';
 import BaseModal from '../../molecules/BaseModal';
-import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import formatBRLMoney from '../../../utils/formatMoney';
-
-const Container = styled.div`
-  display: flex;
-  width: 70%;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  p {
-    font-size: ${(props) => props.theme.fonts.fontSizes.mediumSmall};
-  }
-
-  @media (max-width: 500px) {
-    p {
-      text-align: center;
-    }
-  }
-`;
+import { Container } from './style';
 
 const SimulationModal = ({ open, onClose, simulation = {} }) => {
   const {
