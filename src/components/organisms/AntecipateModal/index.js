@@ -1,21 +1,8 @@
 import React from 'react';
 import Button from '../../atoms/Button';
 import BaseModal from '../../molecules/BaseModal';
-import styled from 'styled-components';
 import PropTypes from 'prop-types';
-
-const Container = styled.div`
-  display: flex;
-  width: 70%;
-  justify-content: space-between;
-  margin-top: 40px;
-
-  @media (max-width: 500px) {
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-`;
+import { Container } from './style';
 
 const AntecipateModal = ({ open, onClose, installment, payInstallment }) => {
   return (
